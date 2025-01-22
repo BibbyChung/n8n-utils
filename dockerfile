@@ -1,7 +1,7 @@
-FROM docker.n8n.io/n8nio/n8n
+FROM n8nio/n8n:1.76.0
 
-User root
+USER root
 
 RUN apk --update add curl
 
-User node
+USER node
