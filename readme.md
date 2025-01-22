@@ -1,7 +1,8 @@
 # n8n-utils
 
-```bash
+## how to use
 
+```bash
 docker create volume n8n_data
 
 docker run -it --rm \
@@ -9,5 +10,23 @@ docker run -it --rm \
   -p 5678:5678 \
   -v n8n_data:/home/node/.n8n \
   bibbynet/n8n-utils
+```
 
+## build image
+
+```bash
+DOCKER_BUILDKIT=1 docker buildx build \
+  --platform linux/amd64 \
+  -t bibbynet/n8n-utils:1.76.0 \
+  -t bibbynet/n8n-utils:latest \
+  -f dockerfile .
+```
+
+
+
+## push to docker.io
+
+```bash
+docker push bibbynet/n8n-utils:1.76.0
+docker push bibbynet/n8n-utils:latest
 ```
