@@ -19,7 +19,7 @@ docker run -it --rm \
 ```bash
 DOCKER_BUILDKIT=1 docker buildx build \
   --platform linux/amd64 \
-  -t bibbynet/n8n-utils:1.76.0 \
+  -t bibbynet/n8n-utils:1.78.1 \
   -t bibbynet/n8n-utils:latest \
   -f dockerfile .
 ```
@@ -29,6 +29,6 @@ DOCKER_BUILDKIT=1 docker buildx build \
 ## push to docker.io
 
 ```bash
-docker push bibbynet/n8n-utils:1.76.0
+docker push bibbynet/n8n-utils:1.78.1
 docker push bibbynet/n8n-utils:latest
 ```
